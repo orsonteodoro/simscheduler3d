@@ -1,0 +1,85 @@
+Building and running SimScheduler
+
+For Windows, to get it to run on you will need to have 
+Visual Studio or Visual C++ Express to open up
+the solution, build it, run it.
+
+Open up SimScheduler.sln
+Build
+Run
+
+For Linux, to get it to run on linux all you need to do is...
+
+./configure
+make
+cd src
+./SimScheduler in0.txt output.txt -FCFS -RR1 -RR2 -MLFQ
+
+
+
+
+
+Optional Dependencies
+
+For 3D OpenGL support the following are required:
+
+          linux	      windows
+sdl       1.2.15      1.2.15	http://www.libsdl.org/
+ftgl      2.1.3_rc5   2.1.3~rc5	http://sourceforge.net/projects/ftgl/
+assimp 	  2.0	      2.0.863	http:/assimp.sourceforge.net/
+freetype  2.4.9	      2.4.2	http://www.freetype.org/
+
+
+
+
+
+Linux font support
+
+Required: Linux Binolium Font		http://www.linuxlibertine.org/
+
+The font should be located at 
+  /usr/share/fonts/libertine-ttf/LinBiolinum_R.ttf 
+for SimScheduler -VIS to find
+
+
+
+
+
+Windows font support
+
+Required: Times New Roman (Times.ttf)
+
+The font should be located at 
+  C:\Windows\Fonts\Times.ttf 
+for SimScheduler -VIS to find
+
+Having satified the optional dependencies and 
+minimum hardware requirements you may view the 3D
+simulation using the -VIS option.
+
+Note these files are included (libs/dlls/headers) are for use for Windows.  
+For linux use your distro's package management facilities.
+
+
+
+
+
+Licenses
+
+cpu.blend 		          released dual-licensed MIT or GPL 2 or above
+hd.blend		          released dual-licensed MIT or GPL 2 or above
+queuecontainer.blend	          released dual-licensed MIT or GPL 2 or above
+queuenode.blend		          released dual-licesned MIT or GPL 2 or above
+schedsysgl.c		          released under BSD (3 clause)
+schedsysgl.h		          released under BSD (3 clause)
+tiny{oq,list,queue,prioq}.{c,h}   released dual-licensed MIT or GPL 2 or above
+All other sourcecode in the src folder is for educational purposes only.
+All other files are files are copyrights of their respective owners.
+
+
+
+
+
+Manual
+
+For linux see the manpage: groff -man -Tascii simscheduler.1

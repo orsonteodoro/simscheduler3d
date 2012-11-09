@@ -1,0 +1,3 @@
+make
+#valgrind --leak-check=yes ./SimScheduler in0.txt output.dat -FCFS -VIS
+./SimScheduler in0.txt output.dat -FCFS -RR1 -RR2 -MLFQ -VIS

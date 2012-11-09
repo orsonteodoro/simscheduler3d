@@ -1,0 +1,57 @@
+.TH SimScheduler 1 "2012-03-12" Linux "User Manuals"
+.SH NAME
+SimScheduler \- the operating system scheduler simulator
+.SH SYNOPSIS
+.B SimScheduler <infile> <outfile> [-FCFS] [-VIS] ...
+.SH DESCRIPTION
+.B SimScheduler
+is a process scheduing program that simiulates a operating 
+system scheduler.  The program will report back various metrics 
+such as turnaround time, waiting time, finish time.  It 
+is also capable of reporting back specifically when a 
+process will be invoked.  With the 
+.B -VIS
+option, a 3D simulation of how processes are handled can
+be displayed.  The simulation results are written to
+.I outfile
+for analysis.
+.SH OPTIONS
+.IP -statsonly
+The output will omit scheduling decisions and show only
+statistics.
+.IP -FCFS
+Runs the first come first serve (FCFS) scheduling algorithm
+.IP -RR1
+Runs the round robin scheduling algorithm with a time quanta
+of 10
+.IP -RR2
+Runs the round robin scheduling algorithm with a time quanta
+of 50.
+.IP -MLFQ
+Runs the multi-level feedback queue scheduling algorithm.
+.IP -VIS
+Enables the 3D visualizer.
+.SH FILES
+.I infile
+.RS
+This file contains a CSV list of process.  Each line will
+contain a <pid> <process_name> <start_time> <cpu_time> <io_time> ...
+without brackets.  cpu_time and io_time list will alternate
+between cpu and io and start and end with only cpu times and may be
+variable but should contain atleast one cpu entry.
+.RE
+.I outfile
+.RS
+The outfile contains sections seperated by blank new
+line.  The first line will specify the algorithm name.
+The second line may contain a list of tuples that list 
+any scheduling decisions.  The tuple appears in the format as 
+(time,pid,name).  After the tuple list, the next few lines
+a list will contain <pid> <name> f:<finish_time> w:<waiting_time>
+t:<turnaround_time>.  The final line will report a final
+summary of average wait time, average turnaround time, and 
+the throughput.
+.RE
+.SH AUTHOR
+Orson Teodoro <oteodoro at ics dot uci dot edu>
+

@@ -1,0 +1,30 @@
+﻿Build started 3/15/2012 3:19:40 PM.
+     1>Project "C:\temp\SimScheduler\SimScheduler\SimScheduler.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\SimScheduler.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"..\libs\freetype-dev_2.4.2-1_win32\include\freetype2" /I"..\libs\freetype-dev_2.4.2-1_win32\include" /I"..\libs\SDL-1.2.15\include" /I"..\libs\ftgl-2.1.3~rc5\src" /I"..\libs\assimp--2.0.863-sdk\include" /ZI /nologo /W3 /WX- /Od /Oy- /D HAVE_SDL /D HAVE_FTGL /D HAVE_ASSIMP /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /openmp /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\src\process.c
+         process.c
+     1>c:\temp\simscheduler\src\process.c(54): warning C4101: 'interrupt_signal' : unreferenced local variable
+       Link:
+         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\temp\SimScheduler\Debug\SimScheduler.exe" /NOLOGO /LIBPATH:"..\libs\assimp--2.0.863-sdk\lib\assimp_release-dll_win32" /LIBPATH:"..\libs\ftgl-2.1.3~rc5\msvc\Build" /LIBPATH:"..\libs\SDL-1.2.15\lib\x86" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\SimScheduler.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\temp\SimScheduler\Debug\SimScheduler.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\temp\SimScheduler\Debug\SimScheduler.lib" /MACHINE:X86 Debug\main.obj
+         Debug\process.obj
+         Debug\processlist.obj
+         Debug\schedsys.obj
+         Debug\schedsysgl.obj
+         Debug\tinylist.obj
+         Debug\tinyoq.obj
+         Debug\tinyprioq.obj
+         Debug\tinyqueue.obj
+         LINK : C:\temp\SimScheduler\Debug\SimScheduler.exe not found or not built by the last incremental link; performing full link
+         SimScheduler.vcxproj -> C:\temp\SimScheduler\Debug\SimScheduler.exe
+       Manifest:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\temp\SimScheduler\Debug\SimScheduler.exe;#1" /manifest Debug\SimScheduler.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Debug\SimScheduler.unsuccessfulbuild".
+         Touching "Debug\SimScheduler.lastbuildstate".
+     1>Done Building Project "C:\temp\SimScheduler\SimScheduler\SimScheduler.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.41

@@ -1,0 +1,16 @@
+make
+#./SimScheduler input.dat output.dat -FCFS -RR1 -RR2 -MLFQ
+#./SimScheduler input.dat output.dat -FCFS
+#./SimScheduler input.dat output.dat -FCFS
+#./SimScheduler input.dat output.dat -RR1
+#./SimScheduler input.dat output.dat -RR2
+#./SimScheduler in0.txt output.dat -FCFS -RR1
+#./SimScheduler in0.txt output.dat -MLFQ -VIS
+#./SimScheduler in0.txt output.dat -RR2 -VIS
+#./SimScheduler in0.txt output.dat -FCFS -RR1 -RR2 -VIS
+#./SimScheduler in0.txt output.dat -FCFS -RR1 -RR2 -VIS
+#./SimScheduler int0.txt output.dat -statsonly -FCFS -RR1 -RR2 -MLFQ
+#valgrind --leak-check=yes ./SimScheduler in0.txt output.dat -FCFS -RR1 -RR2 -MLFQ
+#./SimScheduler in0.txt output.dat -MLFQ
+#./SimScheduler in0.txt output.dat -FCFS
+time ./SimScheduler in0.txt output.dat -MLFQ
